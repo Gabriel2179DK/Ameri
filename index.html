@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ameri</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Importar la fuente Disket Mono de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Disket+Mono&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="icono.png">
+</head>
+<body>
+    <div class="container">
+        <a href="https://discord.gg/mododiablo" target="_blank">
+            <img src="alas.png" alt="Alas" class="alas-image">
+        </a>
+        <div id="countdown">
+            15d 20h 35m 30s
+        </div>
+    </div>
+
+    <script>
+        function startCountdown(duration) {
+            const countdownElement = document.getElementById('countdown');
+            let time = duration;
+
+            const updateCountdown = () => {
+                const days = Math.floor(time / (60 * 60 * 24));
+                const hours = Math.floor((time % (60 * 60 * 24)) / (60 * 60));
+                const minutes = Math.floor((time % (60 * 60)) / 60);
+                const seconds = Math.floor(time % 60);
+
+                countdownElement.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+                if (time > 0) {
+                    time--;
+                } else {
+                    clearInterval(interval);
+                }
+            };
+
+            updateCountdown();
+            const interval = setInterval(updateCountdown, 1000);
+        }
+
+        const durationInSeconds = (15 * 24 * 60 * 60) + (20 * 60 * 60) + (35 * 60) + 30;
+        startCountdown(durationInSeconds);
+    </script>
+</body>
+</html>
