@@ -1,0 +1,53 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url('Session.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    width: 100%;
+}
+
+.play-button {
+    background-color: transparent;
+    border: none;
+    font-size: 50px; /* Ajusta el tamaño del ícono aquí */
+    color: white; /* Cambia el color según el fondo */
+    cursor: pointer;
+    transition: color 0.3s ease; /* Añade una transición suave */
+}
+
+.play-button:hover {
+    color: #ffcc00; /* Color del ícono al pasar el cursor */
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+}
+
+.footer-link {
+    color: white; /* Color inicial del texto */
+    font-size: 30px; /* Tamaño del signo de interrogación */
+    text-decoration: none; /* Sin subrayado */
+    transition: color 0.3s ease; /* Transición suave para el hover */
+}
+
+.footer-link:hover {
+    color: #ffcc00; /* Color amarillo al pasar el cursor */
+}

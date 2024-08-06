@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ameri</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Disket+Mono&display=swap">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <a href="tracklist/index.html">by dukiworld</a>
+    </div>
+
+    <div class="container">
+        <button class="play-button" onclick="playAudio()">
+            &#9658;
+        </button>
+    </div>
+
+    <audio id="audio" src="AmeriAudio.mp3"></audio>
+
+    <script>
+        function playAudio() {
+            var audio = document.getElementById('audio');
+            audio.play();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ameri</title>
+    <link rel="icon" type="image/png" href="icono.png">
+    <link rel="stylesheet" href="style.css"> <!-- Enlace al archivo CSS -->
+</head>
+<body>
+    <img src="Cover.jpg" alt="Cover Image" class="background-image">
+    <img src="Alas.png" alt="Overlay Image" class="overlay-image" onclick="playAudio()">
+
+    <!-- Elemento de audio oculto con múltiples fuentes -->
+    <audio id="audio">
+        <source src="Ameri_Adelanto.ogg" type="audio/ogg">
+        <source src="Ameri_Adelanto.mp3" type="audio/mpeg">
+        Tu navegador no soporta la reproducción de audio.
+    </audio>
+
+    <script>
+        function playAudio() {
+            var audio = document.getElementById("audio");
+            audio.play();
+        }
+    </script>
+</body>
+</html>
